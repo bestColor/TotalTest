@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "iflyMSC/iflyMSC.h"
+#import "ListViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor blueColor];
+    
+    ListViewController *rootVC = [[ListViewController alloc] init];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    
+    self.window.rootViewController = nav;
+    
+    [self.window makeKeyAndVisible];
+    
+    
+    
+    NSString *initString = [[NSString alloc] initWithFormat:@"appid=%@", @"5c9dcc8a"];
+    [IFlySpeechUtility createUtility:initString];
+    
     return YES;
 }
 
