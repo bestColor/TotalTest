@@ -25,6 +25,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"有好的demo都会陆续加进来";
+    NSLog(@"1");
     
     _classArray = [[NSMutableArray alloc] init];
     _noteArray = [[NSMutableArray alloc] init];
