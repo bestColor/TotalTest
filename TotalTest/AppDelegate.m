@@ -23,6 +23,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor blueColor];
     
+    NSLog(@"hahahaha");
+    
     ListViewController *rootVC = [[ListViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:rootVC];
